@@ -151,5 +151,13 @@ grep all $file15 > results_table2.tsv
 paste results_table2.tsv  <(grep delayed $file15) > results_table3.tsv
 paste results_table3.tsv <(grep weather $file15) > final_results_table.tsv
 
-
+ # Question Number 3
+ auc () {
+               cut -d, -f3 flights.May2017-Apr2018.csv > airportcodes.csv
+# cuts the column containing origin airport codes from the file and puts it into a new file
+              cut -d, -f7 flights.May2017-Apr2018.csv >> airportcodes.csv
+# cuts the column containing the destination airport codes from the file and appends it to the bottom of the file conatining the origin airport codes. This creates one file with one column listing all the airport codes.
+              sort -u airportcodes.csv
+# sorts and creates a list of all the unique airport codes.
+}
 
