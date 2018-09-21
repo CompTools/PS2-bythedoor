@@ -161,3 +161,7 @@ paste results_table3.tsv <(grep weather $file15) > final_results_table.tsv
 # sorts and creates a list of all the unique airport codes.
 }
 
+#Question Number 4
+
+fla () {  cut -d, -f4,5,6 flights.May2017-Apr2018.csv | sort -u | grep .*[F][L].*;  }
+
