@@ -27,7 +27,7 @@ done<$file3
 #!/bin/bash
 
 
-#STEP1, utilizing one of the intermediate files produced in problem 1 to generate column1 data values
+# STEP1, utilizing one of the intermediate files produced in problem 1 to generate column1 data values
 
 #Find count of all lines with flights from GNV to ATL
 file2=./filtered_columns.csv
