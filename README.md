@@ -1,4 +1,4 @@
-#Question1:
+# Question1:
 #!/bin/bash
 #After running this code, we then opened the final file with nano -c to get the answer for number 1.
 #STEP1
@@ -22,7 +22,7 @@ do
 grep 1 > GNV_delayed_flights.csv;
 done<$file3
 
-#Question2:
+# Question2:
 
 #!/bin/bash
 
@@ -154,14 +154,17 @@ paste results_table3.tsv <(grep weather $file15) > final_results_table.tsv
  # Question Number 3
  auc () {
                cut -d, -f3 flights.May2017-Apr2018.csv > airportcodes.csv
-# cuts the column containing origin airport codes from the file and puts it into a new file
-              cut -d, -f7 flights.May2017-Apr2018.csv >> airportcodes.csv
-# cuts the column containing the destination airport codes from the file and appends it to the bottom of the file conatining the origin airport codes. This creates one file with one column listing all the airport codes.
-              sort -u airportcodes.csv
-# sorts and creates a list of all the unique airport codes.
+               #cuts the column containing origin airport codes from the file and puts it into a new file
+               cut -d, -f7 flights.May2017-Apr2018.csv >> airportcodes.csv
+               #cuts the column containing the destination airport codes from the file and appends it to the bottom of the file conatining the origin airport codes. This creates one file with one column listing all the airport codes.
+               sort -u airportcodes.csv
+               #sorts and creates a list of all the unique airport codes.
 }
 
-#Question Number 4
+
+
+
+# Question Number 4
 
 fla () {  cut -d, -f4,5,6 flights.May2017-Apr2018.csv | sort -u | grep .*[F][L].*;  }
 
